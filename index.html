@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="description" content="Bellydance Arabian Girls - Clases de danza árabe. Reserva tu clase muestra gratuita." />
+    <title>BELLY DANCE | Arabian Girls - ¡Brilla con la Danza!</title>
+
+    <!-- Tailwind (CDN) -->
+    <script src="https://cdn.tailwindcss.com" defer></script>
+
+    <!-- Google Font (mejor colocar con <link> que con @import dentro de <style>) -->
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <style>
+        /* Tipografía */
+        body { font-family: 'Cormorant Garamond', serif; }
+
+        /* Paleta personalizada */
+        .bg-primary { background-color: #E91E63; } /* Rosa */
+        .text-primary { color: #E91E63; }
+        .bg-accent { background-color: #00BFA5; } /* Turquesa */
+        .text-accent { color: #00BFA5; }
+        .border-accent { border-color: #00BFA5; }
+        .bg-secondary { background-color: #9C27B0; } /* Púrpura */
+        .text-secondary { color: #9C27B0; }
+        .bg-gold { background-color: #FFD700; }
+        .text-gold { color: #FFD700; }
+
+        /* Iconos sociales */
+        .social-icon { transition: transform 0.3s, color 0.3s; }
+        .social-icon:hover { transform: scale(1.2); }
+
+        /* Correcciones de utilidades no estándar usadas en el HTML original */
+        .opacity-15 { opacity: 0.15; }
+
+        /* Animaciones personalizadas (si usas Tailwind JIT puedes hacerlo con utilities; aquí se definen para asegurar que funcionen) */
+        @keyframes fadeInDown {
+            from { opacity: 0; transform: translateY(-10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(10px); }
+            to   { opacity: 1; transform: translateY(0); }
+        }
+        @keyframes slowPulse {
+            0%,100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.02); opacity: 0.9; }
+        }
+        @keyframes fastPulse {
+            0%,100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.03); opacity: 0.85; }
+        }
+        @keyframes wobble {
+            0% { transform: translateX(0); }
+            15% { transform: translateX(-6px) rotate(-2deg); }
+            30% { transform: translateX(6px) rotate(2deg); }
+            45% { transform: translateX(-4px) rotate(-1deg); }
+            60% { transform: translateX(4px) rotate(1deg); }
+            75% { transform: translateX(-2px) rotate(-0.5deg); }
+            100% { transform: translateX(0); }
+        }
+
+        .animate-fade-in-down { animation: fadeInDown .8s ease both; }
+        .animate-fade-in-up   { animation: fadeInUp .9s ease both; }
+        .animate-pulse-slow   { animation: slowPulse 3s infinite; }
+        .animate-pulse-fast   { animation: fastPulse 1s infinite; }
+        .animate-bounce-slow  { animation: bounce 2.5s infinite; } /* bounce viene de Tailwind si carga */
+        .animate-wobble       { animation: wobble 1.2s infinite; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-purple-50 to-pink-50">
+
+    <div class="min-h-screen">
+
+        <!-- HERO -->
+        <header class="bg-primary text-white shadow-2xl relative overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-10">
+                <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+                    <defs>
+                        <pattern id="dot-pattern" width="10" height="10" patternUnits="userSpaceOnUse">
+                            <circle cx="2" cy="2" r="1" fill="rgba(255,255,255,0.3)"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#dot-pattern)"/>
+                </svg>
+            </div>
+
+            <div class="container mx-auto p-6 md:p-16 text-center relative z-10">
+                <div class="mb-6 animate-pulse-slow">
+                    <!-- REEMPLAZA la ruta por una válida (ej.: images/logo.jpg o https://...) -->
+                    <img src="images/logo.jpg"
+                         onerror="console.error('Error al cargar la imagen:', this.src)"
+                         alt="Logo de Bellydance Arabian Girls"
+                         class="mx-auto w-48 md:w-64 h-auto object-contain shadow-2xl rounded-full border-4 border-gold"
+                         style="background: rgba(255,255,255,0.9);">
+                </div>
+
+                <h1 class="text-5xl md:text-7xl font-extrabold tracking-tight text-gold drop-shadow-lg animate-fade-in-down">
+                    Bellydance Arabian Girls
+                </h1>
+
+                <p class="mt-4 text-xl md:text-3xl font-light italic text-white leading-relaxed animate-fade-in-up">
+                    Donde la Danza Árabe, en tu Imagen cobra Vida
+                </p>
+
+                <a href="#clase-muestra" class="mt-10 inline-block bg-accent text-white font-bold text-lg py-4 px-12 rounded-full shadow-2xl hover:bg-green-400 transition duration-300 transform hover:scale-105 animate-bounce-slow">
+                    ¡Agenda tu Clase Muestra GRATIS!
+                </a>
+            </div>
+        </header>
+
+        <!-- LA ESENCIA -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="container mx-auto px-4 text-center max-w-4xl">
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-4">Descubre tu Brillo Interior</h2>
+                <div class="w-24 h-1 bg-accent mx-auto mt-2 rounded-full"></div>
+                <p class="mt-8 text-gray-700 leading-relaxed text-xl">
+                    La Danza Oriental es una expresión sublime de <strong>feminidad, fuerza y arte</strong>. Conecta con tu esencia a través de movimientos fluidos y ritmos cautivadores. <strong>Mejora tu postura, flexibilidad y desata tu confianza</strong> en un ambiente de apoyo y alegría.
+                </p>
+
+                <div class="mt-12 rounded-3xl overflow-hidden shadow-2xl max-w-lg mx-auto transform rotate-2 hover:rotate-0 transition-transform duration-300">
+                    <!-- REEMPLAZA la ruta por una válida -->
+                    <img src="images/grupo-parque.jpg"
+                         onerror="console.error('Error al cargar la imagen:', this.src)"
+                         alt="Grupo de bailarinas de danza árabe posando con velos de colores en un entorno natural."
+                         class="w-full h-auto object-cover">
+                </div>
+            </div>
+        </section>
+
+        <!-- HORARIOS -->
+        <section id="horarios" class="bg-gradient-to-r from-pink-100 via-purple-100 to-indigo-100 py-16 md:py-20">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-bold text-center text-secondary mb-12">Horarios que se Adaptan a Ti</h2>
+
+                <div class="max-w-md mx-auto bg-white p-10 rounded-3xl shadow-2xl border-b-8 border-accent transform hover:scale-105 transition-transform duration-300">
+                    <p class="text-center text-gray-700 mb-8 text-xl">
+                        Encuentra el momento perfecto para sumergirte en la danza:
+                    </p>
+                    <ul class="space-y-6 text-center">
+                        <li class="flex justify-between items-center text-2xl font-semibold text-secondary border-b-2 border-pink-200 pb-4">
+                            <span>Días Mágicos:</span>
+                            <span class="text-primary font-extrabold">Lun, Mar, Jue, Vie</span>
+                        </li>
+                        <li class="flex justify-between items-center text-2xl font-semibold text-secondary pt-4">
+                            <span>Hora de Brillar:</span>
+                            <span class="bg-primary text-white py-2 px-6 rounded-full shadow-lg border-2 border-gold transform hover:scale-110 transition-transform duration-300">17:00 hrs</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- COSTOS Y PROMOCIÓN -->
+        <section id="costos" class="py-16 md:py-20 bg-gradient-to-bl from-white to-pink-50">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl md:text-5xl font-bold text-center text-primary mb-12">Precios Brillantes, Experiencia Inolvidable</h2>
+
+                <div class="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10">
+                    <div class="bg-white p-10 rounded-3xl shadow-2xl border-l-8 border-gold transform hover:-translate-y-2 transition duration-300">
+                        <h3 class="text-3xl font-bold text-secondary text-center mb-6">Promoción de Estreno</h3>
+                        <p class="text-center text-gray-700 mb-8 text-lg">
+                            ¡Celebra con nosotros! Tarifas especiales por tiempo limitado (costo regular $50 MXN/clase):
+                        </p>
+                        <ul class="space-y-5">
+                            <li class="flex justify-between items-center bg-pink-50 p-4 rounded-xl text-xl font-medium shadow-sm">
+                                <span class="text-primary">1 Clase</span>
+                                <span class="font-extrabold text-secondary">$50 MXN</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-pink-100 p-4 rounded-xl text-xl font-medium shadow-md">
+                                <span class="text-primary">2 Clases</span>
+                                <span class="font-extrabold text-secondary">$90 MXN</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-pink-100 p-4 rounded-xl text-xl font-medium shadow-md">
+                                <span class="text-primary">3 Clases</span>
+                                <span class="font-extrabold text-secondary">$130 MXN</span>
+                            </li>
+                            <li class="flex justify-between items-center bg-primary text-white p-5 rounded-xl text-2xl font-bold shadow-lg border-2 border-gold animate-pulse-fast">
+                                <span class="text-gold">4 Clases</span>
+                                <span class="font-extrabold text-gold">$150 MXN</span>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div id="clase-muestra" class="bg-secondary text-white p-10 rounded-3xl shadow-2xl flex flex-col justify-center border-r-8 border-accent transform hover:translate-y-2 transition duration-300">
+                        <h3 class="text-3xl font-bold text-accent mb-6">Tu Primer Paso Mágico</h3>
+                        <p class="text-xl mb-8 leading-relaxed">
+                            Descubre la magia de la danza sin compromiso. Te invitamos a una <strong>Clase Muestra totalmente gratuita</strong>.
+                        </p>
+                        <ul class="list-disc list-inside space-y-3 text-purple-200 mb-8 text-lg">
+                            <li>¡Es esencial reservar tu lugar!</li>
+                            <li>Llámanos al <strong>+52 720 505 7854</strong>.</li>
+                        </ul>
+
+                        <a href="tel:+527205057854" aria-label="Llamar a Bellydance Arabian Girls" class="inline-block bg-accent text-white font-bold text-xl py-4 px-8 rounded-full text-center shadow-lg hover:bg-green-400 transition duration-300 transform hover:scale-105 animate-wobble">
+                            ¡Reserva tu Clase GRATIS Aquí!
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- GALERÍA -->
+        <section class="py-16 md:py-20 bg-gradient-to-r from-pink-50 to-purple-50">
+            <div class="container mx-auto px-4 text-center">
+                <h2 class="text-4xl md:text-5xl font-bold text-primary mb-10">Momentos Mágicos de Nuestra Comunidad</h2>
+
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                    <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-accent transform hover:scale-105 transition-transform duration-300">
+                        <img src="images/galeria1.jpg" alt="Foto grupal de alumnas con sombreros de bruja después de una presentación." class="w-full h-auto object-cover" onerror="console.error('Error al cargar la imagen:', this.src)">
+                    </div>
+
+                    <div class="rounded-3xl overflow-hidden shadow-2xl border-4 border-gold transform hover:scale-105 transition-transform duration-300">
+                        <img src="images/galeria2.jpg" alt="Foto grupal de alumnas vestidas de brujas con velas encendidas." class="w-full h-auto object-cover" onerror="console.error('Error al cargar la imagen:', this.src)">
+                    </div>
+
+                    <div class="sm:col-span-2 rounded-3xl overflow-hidden shadow-2xl border-4 border-accent transform hover:scale-105 transition-transform duration-300">
+                        <img src="images/galeria3.jpg" alt="Bailarina de danza árabe con traje amarillo en un espacio público." class="w-full h-auto object-cover" onerror="console.error('Error al cargar la imagen:', this.src)">
+                    </div>
+                </div>
+
+                <p class="mt-10 text-xl text-gray-800 max-w-xl mx-auto italic">
+                    Descubre la pasión, la camaradería y la magia de cada clase en nuestro estudio.
+                </p>
+            </div>
+        </section>
+
+        <!-- UBICACIÓN -->
+        <section id="ubicacion" class="bg-gray-900 py-16 md:py-20 text-white relative overflow-hidden">
+            <div class="absolute inset-0 z-0 opacity-15" aria-hidden="true">
+                <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                    <defs>
+                        <pattern id="grid-pattern" width="20" height="20" patternUnits="userSpaceOnUse">
+                            <path d="M 20 0 L 0 0 L 0 20" fill="none" stroke="rgba(255,255,255,0.1)" stroke-width="0.5"/>
+                        </pattern>
+                    </defs>
+                    <rect width="100%" height="100%" fill="url(#grid-pattern)"/>
+                </svg>
+            </div>
+
+            <div class="container mx-auto px-4 text-center relative z-10">
+                <h2 class="text-4xl md:text-5xl font-bold text-accent mb-8">¡Encuéntranos y Comienza a Danzar!</h2>
+
+                <div class="max-w-2xl mx-auto bg-gray-800 p-10 rounded-3xl shadow-2xl border-4 border-gold">
+                    <p class="text-xl mb-6 leading-relaxed">
+                        Estamos ubicadas en el corazón vibrante de <strong>Ocoyoacac</strong>, un lugar fácil de encontrar para tu comodidad:
+                    </p>
+
+                    <div class="bg-gray-700 p-8 rounded-xl shadow-inner border border-gray-600">
+                        <p class="text-3xl font-semibold mb-3 text-gold">Asunción Tepexoyuca</p>
+                        <p class="text-2xl text-purple-200">Calle Monterrey y Guaymas</p>
+                        <p class="text-xl italic mt-6 text-gray-300">
+                            ¡Llámanos al <strong>+52 720 505 7854</strong> o usa el mapa!
+                        </p>
+                    </div>
+
+                    <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4 mt-10">
+                        <a href="https://maps.app.goo.gl/qEaVriXtcwArr4n18" target="_blank" rel="noopener noreferrer" class="inline-block bg-accent text-white font-bold text-xl py-4 px-8 rounded-full shadow-lg hover:bg-green-400 transition duration-300 transform hover:scale-105">
+                            <i class="fas fa-map-marker-alt mr-2" aria-hidden="true"></i> Ver Ubicación
+                        </a>
+
+                        <a href="tel:+527205057854" class="inline-block bg-green-500 text-white font-bold text-xl py-4 px-8 rounded-full shadow-lg hover:bg-green-400 transition duration-300 transform hover:scale-105" aria-label="Llamar ahora">
+                            <i class="fas fa-phone-alt mr-2" aria-hidden="true"></i> Llamar Ahora
+                        </a>
+                    </div>
+
+                    <div class="mt-12">
+                        <h3 class="text-2xl font-semibold text-gold mb-6">Síguenos en nuestras Redes Sociales</h3>
+                        <div class="flex justify-center space-x-8">
+                            <a href="https://www.facebook.com/share/17XaVPuMJn/" target="_blank" rel="noopener noreferrer" class="social-icon text-3xl text-blue-500 hover:text-blue-400" aria-label="Facebook">
+                                <i class="fab fa-facebook-square"></i>
+                            </a>
+
+                            <a href="https://www.tiktok.com/@bellydancearabian" target="_blank" rel="noopener noreferrer" class="social-icon text-3xl text-white hover:text-gray-400" aria-label="TikTok">
+                                <i class="fab fa-tiktok"></i>
+                            </a>
+
+                            <a href="https://www.instagram.com/bellydancearabian" target="_blank" rel="noopener noreferrer" class="social-icon text-3xl text-pink-500 hover:text-pink-400" aria-label="Instagram">
+                                <i class="fab fa-instagram-square"></i>
+                            </a>
+
+                            <a href="https://www.youtube.com/@BELLYDANCEARABIANGIRLS" target="_blank" rel="noopener noreferrer" class="social-icon text-3xl text-red-600 hover:text-red-500" aria-label="YouTube">
+                                <i class="fab fa-youtube-square"></i>
+                            </a>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- FOOTER -->
+        <footer class="bg-gray-950 text-gray-500 py-8">
+            <div class="container mx-auto px-4 text-center text-sm">
+                <div class="flex justify-center space-x-6 mb-4">
+                    <a href="https://www.facebook.com/share/17XaVPuMJn/" target="_blank" rel="noopener noreferrer" class="social-icon text-2xl text-blue-500 hover:text-blue-400" aria-label="Facebook">
+                        <i class="fab fa-facebook-square"></i>
+                    </a>
+                    <a href="https://www.tiktok.com/@bellydancearabian" target="_blank" rel="noopener noreferrer" class="social-icon text-2xl text-white hover:text-gray-400" aria-label="TikTok">
+                        <i class="fab fa-tiktok"></i>
+                    </a>
+                    <a href="https://www.instagram.com/bellydancearabian" target="_blank" rel="noopener noreferrer" class="social-icon text-2xl text-pink-500 hover:text-pink-400" aria-label="Instagram">
+                        <i class="fab fa-instagram-square"></i>
+                    </a>
+                    <a href="https://www.youtube.com/@BELLYDANCEARABIANGIRLS" target="_blank" rel="noopener noreferrer" class="social-icon text-2xl text-red-600 hover:text-red-500" aria-label="YouTube">
+                        <i class="fab fa-youtube-square"></i>
+                    </a>
+                </div>
+
+                <p>&copy; <span id="year"></span> Bellydance Arabian Girls. Todos los derechos reservados. | Diseñado con Pasión y Estilo.</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script>
+        // Actualiza el año del pie automáticamente
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>
